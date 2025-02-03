@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: browser-ui
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: browser-ui
+  template:
+    metadata:
+      labels:
+        app: browser-ui
+    spec:
+      containers:
+        - name: browser-ui
+          image: mhoffman26/browser-ui-recipe:1.0.1
+          env:
+            - name: KAFKA_BROKER
+              value: "kafka-service:9092"
