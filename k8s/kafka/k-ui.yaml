@@ -1,10 +1,4 @@
 ---
-# Kafka Namespace
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: kafka
----
 # Kafka UI Deployment
 apiVersion: apps/v1
 kind: Deployment
